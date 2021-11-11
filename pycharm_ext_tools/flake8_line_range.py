@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+"""Partial flake8 (selected code block) for PyCharm."""
 from argparse import ArgumentParser
 import os.path
 import subprocess
@@ -9,7 +10,7 @@ import sys
 def validate_args(args):
     assert (
             args.start_line <= args.end_line
-    ), f'Invalid line numbers: {args.start_line}..{args.end_line}'
+    ), f'Invalid line range: {args.start_line}..{args.end_line}'
     assert os.path.exists(args.filename), f'Non existing file: {args.filename}'
     assert os.path.exists(args.flake8_bin), \
         f'Non existing file: {args.flake8_bin}'
