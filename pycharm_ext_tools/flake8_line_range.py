@@ -7,10 +7,12 @@ from argparse import ArgumentParser
 
 
 def validate_args(args):
-    assert (args.start_line <= args.end_line), \
-        f'Invalid line numbers: {args.start_line}..{args.end_line}'
+    assert (
+            args.start_line <= args.end_line
+    ), f'Invalid line numbers: {args.start_line}..{args.end_line}'
     assert os.path.exists(args.filename), f'Non existing file: {args.filename}'
-    assert os.path.exists(args.flake8_bin), f'Non existing file: {args.filename}'
+    assert os.path.exists(args.flake8_bin), \
+        f'Non existing file: {args.flake8_bin}'
 
 
 def get_args():
@@ -51,10 +53,7 @@ def run_flake8(flake8_bin, start_line, end_line, filename):
 
 def main():
     args = get_args()
-    run_flake8(args.flake8_bin,
-               args.start_line,
-               args.end_line,
-               args.filename)
+    run_flake8(args.flake8_bin, args.start_line, args.end_line, args.filename)
 
 
 if __name__ == '__main__':
