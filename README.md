@@ -1,5 +1,5 @@
 # Pycharm External Tools
-Support for formatting tools in Pycharm  
+Extentions to Pycharm code formatting tools.  
 Currently supported are flake8 and black on a selected code block.
 
 ## Usage
