@@ -19,19 +19,33 @@ Currently supported are flake8 and black on a selected code block.
 
 `pip install git+https://github.com/haim0n/pycharm_ext_tools.git`
 
-2. Add new external tool per utility (e.g. flake8) as follows:
+2. Add new external tool for flake8 as follows:
 
 `File -> Settings -> Tools -> External Tools -> '+' (Add)`
 
 For conda environment named `dev` fill in the params:
 
 ```
-Name:               Flake8 selection
-Description:        Black formatter for selected lines
+Name:               Flake8 validation
+Description:        Flake8 style validation for selected lines
 Program:            /home/haim0n/anaconda3/envs/dev/bin/python
 Arguments:          -m pycharm_ext_tools.flake8_line_range /home/haim0n/anaconda3/envs/dev/bin/flake8 $SelectionStartLine$ $SelectionEndLine$ $FilePath$
 Working Directory: $ProjectFileDir$
 ```
 *Remark for Windows users: programs must include .exe suffixes (i.e. `C:\...\python.exe`,  `C:\...\flake8.exe`)*.
+
+3. Add new external tool for `black` as follows:
+
+`File -> Settings -> Tools -> External Tools -> '+' (Add)`
+
+For conda environment named `dev` fill in the params:
+
+```
+Name:               Black formatter
+Description:        Black formatter for selected lines
+Program:            /home/haim0n/anaconda3/envs/dev/bin/python
+Arguments:          -m pycharm_ext_tools.black_line_range /home/haim0n/anaconda3/envs/dev/bin/black $SelectionStartLine$ $SelectionEndLine$ $FilePath$
+Working Directory: $ProjectFileDir$
+```
 
 And you're done !
