@@ -32,5 +32,6 @@ Program:            /home/haim0n/anaconda3/envs/dev/bin/python
 Arguments:          -m pycharm_ext_tools.flake8_line_range /home/haim0n/anaconda3/envs/dev/bin/flake8 $SelectionStartLine$ $SelectionEndLine$ $FilePath$
 Working Directory: $ProjectFileDir$
 ```
+*Remark for Windows users: programs must include .exe suffixes (i.e. `C:\...\python.exe`,  `C:\...\flake8.exe`)*.
 
 And you're done !
