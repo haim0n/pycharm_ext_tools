@@ -8,7 +8,7 @@ import subprocess
 
 
 def run_black(black_bin, start_line, end_line, input_file):
-    black_args = '--skip-string-normalization'
+    black_args = '--skip-string-normalization --line-length=120'
 
     with open(input_file, "rt", encoding="utf-8") as src_file:
         src_contents = [line for line in src_file]
