@@ -6,7 +6,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-requirements = ('flake8', 'black')
+requirements = ('flake8==5.0.0', 'black')
 
 setup(
     name='pycharm_ext_tools',
