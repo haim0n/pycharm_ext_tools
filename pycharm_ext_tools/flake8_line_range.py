@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 """Partial flake8 (selected code block) for PyCharm."""
-from argparse import ArgumentParser
 import os.path
 import subprocess
 import sys
+from argparse import ArgumentParser
 
 
 def validate_args(args):

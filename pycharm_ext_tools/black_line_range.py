@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 """Partial black formatter for PyCharm."""
-from argparse import ArgumentParser
-import tempfile
 import os
 import subprocess
+import tempfile
+from argparse import ArgumentParser
 
 
 def run_black(black_bin, start_line, end_line, input_file):
